@@ -126,7 +126,17 @@ la tabla resultante de cargos quedo así:
 
 ![charges](images/charges.png)
 
-Solo para probar que solo quedaron dos IDs de las dos compañias que existen
-en el sistema podemos revisar los id unicos de las compañias:
+Solo para probar que solo quedaron dos IDs de las dos compañías que existen
+en el sistema podemos revisar los id únicos de las compañías:
 
 ![distinct](images/distinct.png)
+
+## Vista
+
+La vista con la información requerida es creada de la siguiente forma:
+
+![view](images/view.png)
+
+Al final de todas las transformaciones las tablas creadas son las siguientes:
+
+![all](images/view.png)
