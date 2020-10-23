@@ -66,7 +66,7 @@ futuro de la operación. Digamos que esta operación se va a estar repitiendo o
 se piensa automatizar con diferentes tipos de archivos y formatos. Todos estos
 parámetros se pueden tener en consideración para crear una herramienta que se
 vaya volviendo mas robusta y útil para el manejo de los datos. El proyecto se
-encuentra en el [directorio](save_data/).
+encuentra en el directorio [save_data](save_data/).
 
 Un ejemplo de los datos cargados en la base de datos.
 ![data](images/data_data.png)
@@ -82,8 +82,8 @@ en cualquier plataforma windows.
 Siguiendo la misma lógica que que en el ejercicio anterior, el archivo se creo
 utilizando Rust. El objetivo es crear una herramienta compilada que pueda irse
 mejorando con el uso. Los parámetros del script se pueden ir ajustando para ir
-creando un ejecutable mas versátil. El proyecto se encuentra en el
-[directorio](extract_data/)
+creando un ejecutable mas versátil. El proyecto se encuentra en el directorio
+[extract_data](extract_data/)
 
 ## Transformación
 
@@ -95,8 +95,8 @@ Como se puede ver los campos ID y company_id se requieren transformar a un
 tamaño menor del que vienen en los datos originales. Esa fue una de las
 dificultades al trabajar con las transformaciones de la información.
 
-El script para transformar los datos se encuentra en el
-[directorio](transform_data/).
+El script para transformar los datos se encuentra en el directorio
+[transform_data](transform_data/).
 
 Un ejemplo de los datos cargados en la base de datos.
 ![data](images/cargo_data.png)
@@ -107,4 +107,26 @@ Las nuevas tablas con la información dispesa quedarían asi:
 
 ![tables](images/tables.png)
 
+Para popular las tablas primero hay que sacar las compañias unicas registradas
+en la base de datos. En la siguiente imagen se puede ver que solo existen dos
+compañias con registros mal hechos.
 
+![companias](images/companies.png)
+
+Estas dos compañias se guardan en la tabla de company, creando un registro
+maestro de las compañias. Los registros quedan asi:
+
+![master](images/master.png)
+
+Usando los registros maestros de las empresas lo que siguiente es transformar
+los datos de cargos y almacenarlos en su tabla correspondiente.
+
+Despues de usar el script en el directorio [disperse_data](disperse_data/)
+la tabla resultante de cargos quedo así:
+
+![charges](images/charges.png)
+
+Solo para probar que solo quedaron dos IDs de las dos compañias que existen
+en el sistema podemos revisar los id unicos de las compañias:
+
+![distinct](images/distinct.png)
