@@ -139,4 +139,4 @@ La vista con la información requerida es creada de la siguiente forma:
 
 Al final de todas las transformaciones las tablas creadas son las siguientes:
 
-![all](images/view.png)
+![all](images/all.png)
